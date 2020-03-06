@@ -15,7 +15,7 @@ export class GotItemService {
     return this.http.get<GotItem[]>(this.jsonUrl);
   }
 
-  /*getOne(id: string | number): Observable<GotItem> {
-    return this.http.get<GotItem>(`${this.jsonUrl}/${id}`);
-  }*/
+  getOne(name: string): Observable<GotItem> {
+    return this.http.get<GotItem>(`${this.jsonUrl}?name=${name}`);
+  }
 }

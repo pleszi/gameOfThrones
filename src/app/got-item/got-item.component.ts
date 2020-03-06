@@ -1,5 +1,7 @@
+import { GotItemDetailComponent } from "./../got-item-detail/got-item-detail.component";
 import { GotItem } from "../model/got-item";
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, Output } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-got-item",
@@ -9,7 +11,7 @@ import { Component, OnInit, Input } from "@angular/core";
 export class GotItemComponent implements OnInit {
   @Input() gotitem: GotItem;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 }

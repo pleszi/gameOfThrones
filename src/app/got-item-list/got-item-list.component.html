@@ -1,0 +1,37 @@
+<div class="leftPanel">
+  <div *ngFor="let item of gotItemList | async">
+    <div class="itemStyle">
+      <app-got-item
+        (click)="selectHero(item)"
+        [gotitem]="item"
+      > </app-got-item>
+    </div>
+  </div>
+</div>
+
+<div class="rightPanel">
+  <h1>Game of Thrones</h1>
+  <div>
+    <label for="">Search character</label>
+  </div>
+  <div *ngIf="selectedCharacter">
+    <p>
+      {{selectedCharacter?.name}}
+    </p>
+    <p>
+      {{selectedCharacter?.bio}}
+    </p>
+    <p>
+      {{selectedCharacter?.portrait}}
+    </p>
+    <p>
+      {{selectedCharacter?.picture}}
+    </p>
+
+  </div>
+  <input
+    type="text"
+    class="search-button"
+  >
+
+</div>

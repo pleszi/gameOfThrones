@@ -3,18 +3,11 @@
   role="main"
 >
   <div class="leftPanel">
+    <app-got-item-list>
 
-    <div *ngFor="let item of gotItemList | async">
-      <div class="itemStyle">
-        <app-got-item [gotitem]="item"> </app-got-item>
-      </div>
-    </div>
-  </div>
-  <div class="rightPanel">
-    <h1>Game of Thrones</h1>
-    <label for="">Search character</label>
-  </div>
+    </app-got-item-list>
 
+  </div>
 </div>
 
 
